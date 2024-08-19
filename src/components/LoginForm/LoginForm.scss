@@ -1,0 +1,36 @@
+form {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 19px;
+    justify-self: center;
+    margin: 50px 0 10px 0;
+    padding: 10px;
+    background: var(--low-green-corpo-color);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: var(--white-corpo-color);
+  }
+  
+  #user,
+  #password {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--white-corpo-color);
+    backdrop-filter: blur(5px);
+    color: var(--strong-green-corpo-color);
+    width: 200px;
+    box-shadow: 0 1px 4px var(--low-green-corpo-color);
+  }
+  
+  #password  {
+    margin-bottom: 120px;
+  }

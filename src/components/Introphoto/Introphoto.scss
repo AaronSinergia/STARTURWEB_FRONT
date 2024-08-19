@@ -1,0 +1,54 @@
+.photo_container {
+    position: relative;
+    width: 98%;
+    margin-top: 70px;
+    margin-bottom: 120px;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+.girl_photo {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    // filter: grayscale(100%); /// SOOOOOOLO EN MOOOODO WEBBB
+    transition: filter 0.4s ease-in-out;
+    animation: blink 3s infinite; 
+}
+
+.textcontent {  /// SOOOOOOLO EN MOOOODO MOBILEEEEE
+    font-family: 'Lobster Two', cursive;
+    position: absolute;
+    font-size: 30px;
+    top: 46%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: var(--low-green-corpo-color); 
+    padding: 10px; 
+}
+
+// .photo_container:hover .girl_photo {/// SOOOOOOLO EN MOOOODO WEBBB
+//     filter: grayscale(0%);
+// }
+
+.photo_container::before {
+    font-family: 'Lobster Two', cursive;
+    content: "¿Comenzamos?"; 
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    top: 53%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: var(--low-green-corpo-color); 
+    padding: 10px; 
+    opacity: 0; 
+    transition: opacity 0.25s ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.photo_container:hover::before {
+    opacity: 1;
+}

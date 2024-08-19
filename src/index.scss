@@ -1,0 +1,19 @@
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-family: 'EB Garamond', cursive;
+
+  background-color: var(--white-corpo-color);
+
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --red-corpo-color:  #bc4749;
+  --white-corpo-color: #f2e8cf;
+  --light-green-corpo-color: #a7c957;
+  --low-green-corpo-color: #6a994e;
+  --strong-green-corpo-color: #386641;
+}

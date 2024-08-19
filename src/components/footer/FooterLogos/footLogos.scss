@@ -1,0 +1,48 @@
+$logo-hover-contrast: 100%;
+
+.logos_rrss_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+
+  .github_logo,
+  .linkedin_logo,
+  .netlify_logo {
+    transition: filter 0.3s ease; 
+  }
+
+  .github_logo {
+    width: 100px;
+    filter: contrast(0%);
+    padding: 10px;
+
+    &:hover {
+      filter: contrast($logo-hover-contrast);
+    }
+  }
+
+  .linkedin_logo {
+    width: 29px;
+    filter: contrast(0%);
+    padding: 10px;
+
+    &:hover {
+      filter: contrast($logo-hover-contrast);
+    }
+  }
+
+  .netlify_logo {
+    width: 100px;
+    filter: grayscale(100%);
+    padding: 10px;
+
+    &:hover {
+      filter: contrast($logo-hover-contrast);
+    }
+  }
+}
