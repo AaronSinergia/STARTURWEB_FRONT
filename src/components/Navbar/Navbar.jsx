@@ -17,7 +17,7 @@ const Navbar = () => {
         <h1
           className={`header_h1 ${state.itsOn ? 'hide' : ''}`}
           onMouseEnter={() => {
-            dispatch({ type: 'SET_HEADER', payload: 'Volver' });
+            dispatch({ type: 'SET_HEADER', payload: 'Volver a Home' });
           }}
           onMouseLeave={() => {
             dispatch({ type: 'SET_HEADER', payload: 'star(t)UrWeb' });

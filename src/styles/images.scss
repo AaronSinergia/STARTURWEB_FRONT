@@ -1,0 +1,64 @@
+img[alt="starturweb_logo"] {
+  position: absolute;
+    width: 60px;
+    margin-top: 90px;
+    margin-left: 300px;
+}
+
+img[alt="imagine_person_logo"] {
+  position: absolute;
+    width: 70px;
+    height: 140px;
+    margin-left: 20px;
+    bottom: 295px;
+}
+
+img[alt="cart_logo"] {
+  position: absolute;
+    width: 50px;
+    margin-left: 315px;
+    bottom: 130px;
+}
+
+img[alt="cloud_logo"] {
+  position: absolute;
+    width: 200px;
+    top: 770px;
+    right: 210px;
+    filter: opacity(90%);
+}
+
+
+
+.contact_article > img {
+    width: 80px;
+    margin-left: 20px;
+    // filter: grayscale(100%); SOOOOOLO EN MODO WEEEB
+    cursor: pointer;
+}
+
+.contact_article > img[alt="linkedin_contact_logo"] {
+    filter: brightness(70%);
+}
+
+.contact_article > img[alt="whatsapp_contact_logo"] {
+    filter: brightness(90%);
+}
+
+.contact_article > img[alt="downarrow_contact_logo"]:hover {
+    cursor: none;
+    animation: moveDown 3s infinite; 
+}
+
+@keyframes moveDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px); 
+    }
+  }
+
+// .contact_article > img:hover { SOOOOOLO EN MODO WEEEB
+//     filter: grayscale(0%);
+// }

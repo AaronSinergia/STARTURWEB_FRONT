@@ -33,7 +33,7 @@ const Contact = () => {
         />
         <H2Box
           className="h2_brightgreen"
-          text="Puedes seguir otros trabajos de la compañía, clicando en los logos de abajo."
+          text="Puedes ver otros proyectos, haciendo click en los logos de abajo."
         />
       </article>
     </>

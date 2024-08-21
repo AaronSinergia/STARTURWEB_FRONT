@@ -11,9 +11,7 @@ h2 {
     padding: 10px;
     font-weight: 600;
     border-radius: 10px;
-    border: 1px solid var(--gold-corpo-color);
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
-    background: radial-gradient(circle, var(--gold-corpo-color) 20%, var(  --blue-corpo-color) 100%);
     background-clip: text;
     color: transparent;
     font-family: 'Lobster Two', cursive;
@@ -26,7 +24,6 @@ h2 {
 }
 
 
-
 .contact_article {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -35,38 +32,6 @@ h2 {
     align-items: center;
 }
 
-.contact_article > img {
-    width: 80px;
-    margin-left: 20px;
-    // filter: grayscale(100%); SOOOOOLO EN MODO WEEEB
-    cursor: pointer;
-}
-
-.contact_article > img[alt="linkedin_contact_logo"] {
-    filter: brightness(70%);
-}
-
-.contact_article > img[alt="whatsapp_contact_logo"] {
-    filter: brightness(90%);
-}
-
-.contact_article > img[alt="downarrow_contact_logo"]:hover {
-    cursor: none;
-    animation: moveDown 3s infinite; 
-}
-
-@keyframes moveDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(50px); 
-    }
-  }
-
-// .contact_article > img:hover { SOOOOOLO EN MODO WEEEB
-//     filter: grayscale(0%);
-// }
 
 .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
     margin: 10px;
@@ -76,7 +41,7 @@ h2 {
 .h2_darkgreen{
     font-family: 'EB Garamond', cursive;
     color: var(--white-corpo-color);
-    background: var(--strong-green-corpo-color);
+    background: var(--light-green-corpo-color);
     padding: 20px;
     margin: 40px;
 }
@@ -84,7 +49,7 @@ h2 {
 .h2_brightgreen{
     font-family: 'EB Garamond', cursive;
     color: var(--low-green-corpo-color);
-    background: var(--light-green-corpo-color);
+    background: var(--strong-green-corpo-color);
     padding: 20px;
     margin: 40px;
 }
@@ -92,7 +57,7 @@ h2 {
 
 .about_article > h2:hover {
     color: var(--white-corpo-color);
-    background-color: var(--red-corpo-color);
+    background-color: var(--gold-corpo-color);
     cursor:help;
     animation: blink 5s infinite; 
 }
@@ -102,3 +67,21 @@ h2 {
     color: var(--strong-green-corpo-color);
     margin: 7px 140px 20px 140px;
 }
+
+.register_advertisment {
+    color: var(--low-green-corpo-color);
+    margin: 60px 180px 0 35px;
+    padding: 5px;
+    font-size: 18px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
+    animation: moveLeft 3s infinite; 
+}
+
+@keyframes moveLeft {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px); 
+    }
+  }

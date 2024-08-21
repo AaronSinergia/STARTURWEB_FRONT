@@ -12,7 +12,7 @@ const Introphoto = () => {
         );
       }}
     >
-      <Link to="/start_project">
+      <Link to="/login">
         <img className="girl_photo" src="./assets/girl.png" alt="girl_photo" />
         <h3 className="textcontent">¿Comenzamos?</h3>
       </Link>
