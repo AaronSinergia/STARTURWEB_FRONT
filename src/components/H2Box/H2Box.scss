@@ -20,7 +20,7 @@ h2 {
 .about_title, .login_title, .contact_title {    
     font-size: 40px;
     color: var(--strong-green-corpo-color);
-    margin: 40px 20px 20px 20px;
+    margin: 24px 20px 20px 20px;
 }
 
 
@@ -67,21 +67,3 @@ h2 {
     color: var(--strong-green-corpo-color);
     margin: 7px 140px 20px 140px;
 }
-
-.register_advertisment {
-    color: var(--low-green-corpo-color);
-    margin: 60px 180px 0 35px;
-    padding: 5px;
-    font-size: 18px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
-    animation: moveLeft 3s infinite; 
-}
-
-@keyframes moveLeft {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(10px); 
-    }
-  }
