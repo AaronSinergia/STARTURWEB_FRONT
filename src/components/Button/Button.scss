@@ -1,4 +1,4 @@
-.login_btns{
+.login_btns {
    display: flex; 
    justify-content: center;
    align-items: center;
@@ -43,7 +43,26 @@
    background:linear-gradient(var(--light-green-corpo-color), var(--strong-green-corpo-color));
 }
 
-.register_btn:hover, .enter_btn:hover {
+.logout_button {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   width: 120px;
+   height: 40px;
+   border-width:1px;
+   margin-left: 50px;
+   color: var(--white-corpo-color);
+   font-weight:bold;
+   border-top-left-radius:6px;
+   border-top-right-radius:6px;
+   border-bottom-left-radius:6px;
+   border-bottom-right-radius:6px;
+   background:linear-gradient(var(--light-green-corpo-color), var(--strong-green-corpo-color));
+}
+
+.register_btn:hover, .enter_btn:hover, .logout_button:hover {
     background: linear-gradient(var(--gold-corpo-color), rgb(143, 98, 14));
   }
        

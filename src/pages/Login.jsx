@@ -1,17 +1,25 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import H2Box from '../components/H2Box/H2Box';
 import LoginForm from '../components/LoginForm/LoginForm';
-import { loginUser } from '../function/handleFunctions';
 import Button from '../components/Button/Button';
-import { Link } from 'react-router-dom';
+import { loginUser } from '../function/handleFunctions';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <H2Box className="login_title" text="Iniciar Sesión" />
       <LoginForm />
       <div className="login_btns">
-        <Button onClick={loginUser} className={'enter_btn'} text={'ENTRAR'} />
+        <Button
+          onClick={() => {
+            loginUser(navigate);
+          }}
+          className={'enter_btn'}
+          text={'ENTRAR'}
+        />
         <Link to="/register">
           <Button className={'register_btn'} text={'REGISTRATE'} />
         </Link>

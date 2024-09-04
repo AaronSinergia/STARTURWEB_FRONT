@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
-import { context } from '../hooks/context/context';
+import React from 'react';
 import Introphoto from '../components/Introphoto/Introphoto';
-import StartProject from './StartProject';
 
 const Home = () => {
-  const { state } = useContext(context);
-  return <>{state.itsLogged ? <StartProject /> : <Introphoto />}</>;
+  return <Introphoto />;
 };
 
 export default Home;

@@ -5,7 +5,6 @@ Requisitos
 
     IDEAS:
 
-1 - QUE CUANDO LE DAS A CERRAR SESION SE CIERRE Y VUELVA A L APAG PRINCIPAL
 
     - IMPORTANTE: Poner edn algún lado de la web cuando te logueas elnombre del usuario, y una imagen de un user loginsiempre la misma no te compliques.
 

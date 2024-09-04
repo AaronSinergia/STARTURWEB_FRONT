@@ -6,7 +6,6 @@ const initialState = {
   itsOn: false,
   setHeader: 'star(t)UrWeb',
   currentStep: 0,
-  itsLogged: false,
 };
 
 const reducer = (state, action) => {
@@ -17,8 +16,6 @@ const reducer = (state, action) => {
       return { ...state, setHeader: action.payload };
     case 'SET_CURRENT_STEP':
       return { ...state, currentStep: action.payload };
-    case 'SET_ITS_LOGGED':
-      return { ...state, itsLogged: action.payload };
     default:
       return state;
   }

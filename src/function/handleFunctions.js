@@ -1,6 +1,6 @@
 import { fetchFunction } from './fetchFunction';
 
-export const registerUser = async () => {
+export const registerUser = async (navigate) => {
   event.preventDefault();
   const username = document.querySelector('#user').value;
   const password = document.querySelector('#password').value;
@@ -14,14 +14,18 @@ export const registerUser = async () => {
     }),
   });
 
-  if (response.response.status === 200 || 201) {
+  if (response.status === 201) {
     alert(`Bienvenido ${username}`);
+    localStorage.setItem('user_id', response.response._id);
+    navigate('/start_project');
   } else {
-    alert('El usuario parece que ya existe.');
+    alert(
+      'Ya se ha registrado un usuario con ese nombre o el usuario/contraseña no han sido especificados.'
+    );
   }
 };
 
-export const loginUser = async () => {
+export const loginUser = async (navigate) => {
   event.preventDefault();
   const username = document.querySelector('#user').value;
   const password = document.querySelector('#password').value;
@@ -37,16 +41,17 @@ export const loginUser = async () => {
 
   console.log(response);
 
-  // if (response.response.status === 200) {
-  //   alert('El usuario o contraseña no existen');
-  // } else {
-  //   alert(`Bienvenido ${username}`);
-  // }
+  if (response.status === 200) {
+    alert(`Bienvenido ${username}`);
+    localStorage.setItem('TOKEN', response.response.token);
+    localStorage.setItem('user_id', response.response._id);
+    navigate('/start_project');
+  } else {
+    alert('El usuario o contraseña no existen');
+  }
 
-  // if (response.response.assistant.isAdmin == 'Yes' && response.status === 200) {
-  //   alert('Te has logado con usuario ADMIN');
-  //   console.log('Te has logado con usuario ADMIN');
-  // }
+  if (response.response.user.isAdmin == 'Yes' && response.status === 200) {
+    alert('Te has logado con usuario ADMIN');
+    console.log('Te has logado con usuario ADMIN');
+  }
 };
-
-// export const registerUser = () => {};
