@@ -23,7 +23,7 @@ const Navbar = () => {
             dispatch({ type: 'SET_HEADER', payload: 'star(t)UrWeb' });
           }}
         >
-          {state.setHeader}
+          {state.itsLogged ? 'Cerrar Sesión' : state.setHeader}
         </h1>
       </Link>
       <ul className={state.itsOn ? 'show' : 'hide'}>
