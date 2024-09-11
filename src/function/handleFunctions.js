@@ -14,6 +14,8 @@ export const registerUser = async (navigate) => {
     }),
   });
 
+  console.log(response);
+
   if (response.status === 201) {
     alert(`Bienvenido ${username}`);
     localStorage.setItem('user_id', response.response._id);
@@ -44,7 +46,8 @@ export const loginUser = async (navigate) => {
   if (response.status === 200) {
     alert(`Bienvenido ${username}`);
     localStorage.setItem('TOKEN', response.response.token);
-    localStorage.setItem('user_id', response.response._id);
+    localStorage.setItem('user_id', response.response.user._id);
+    localStorage.setItem('USERNAME', response.response.user.username);
     navigate('/start_project');
   } else {
     alert('El usuario o contraseña no existen');

@@ -6,7 +6,7 @@ Requisitos
     IDEAS:
 
 
-    - IMPORTANTE: Poner edn algún lado de la web cuando te logueas elnombre del usuario, y una imagen de un user loginsiempre la misma no te compliques.
+IMPORTANAAAANTE: SEGUIR CON LA IMAGEN DEL LOGIN Y CERRAR SESION
 
     - Poder subir imagenes y que se suban a cloudinary, dependiendo de que sea se guardará en una carpeta u otra revisar, c omo se hace eso.
     

@@ -4,6 +4,7 @@ import { context } from './context';
 
 const initialState = {
   itsOn: false,
+  itsFolded: false,
   setHeader: 'star(t)UrWeb',
   currentStep: 0,
 };
@@ -12,6 +13,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'SET_ITSON':
       return { ...state, itsOn: action.payload };
+    case 'SET_ITSFOLDED':
+      return { ...state, itsFolded: action.payload };
     case 'SET_HEADER':
       return { ...state, setHeader: action.payload };
     case 'SET_CURRENT_STEP':

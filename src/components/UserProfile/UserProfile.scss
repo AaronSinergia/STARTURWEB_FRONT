@@ -1,0 +1,64 @@
+.user-profile {
+  display: flex;
+  flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid var(--light-green-corpo-color);
+    border-radius: 5px;
+    background-color: var(--white-corpo-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    h2 {
+      text-align: center;
+      color: var(--strong-green-corpo-color);
+      font-size: 35px;
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
+  
+    .form-group {
+      font-size: 20px;
+  
+      label {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      input {
+        padding: 5px;
+        background-color: var(--white-corpo-color);
+        color: var(--strong-green-corpo-color);
+        font-weight: 800;
+        border-radius: 3px;
+        text-align: center;
+      }
+    }
+  }
+  
+  #username,
+  #password {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--white-corpo-color);
+    backdrop-filter: blur(5px);
+    color: var(--strong-green-corpo-color);
+    width: 200px;
+    box-shadow: 0 1px 4px var(--low-green-corpo-color);
+  }
+
+  .error_message{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--strong-green-corpo-color);
+  }

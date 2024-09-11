@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { context } from '../../hooks/context/context';
 import { Link } from 'react-router-dom';
+import UserMenu from '../UserMenu/UserMenu';
 import './navbar.scss';
-import Button from '../Button/Button';
 
 const Navbar = () => {
   const { state, dispatch } = useContext(context);
@@ -11,7 +11,12 @@ const Navbar = () => {
     : '/login';
 
   return (
-    <nav onMouseLeave={() => dispatch({ type: 'SET_ITSON', payload: false })}>
+    <nav
+      onMouseLeave={() => {
+        dispatch({ type: 'SET_ITSON', payload: false });
+        dispatch({ type: 'SET_ITSFOLDED', payload: false });
+      }}
+    >
       <img
         src="/assets/icons/nav_icon.png"
         alt="title_logo"
@@ -27,20 +32,14 @@ const Navbar = () => {
           dispatch({ type: 'SET_HEADER', payload: 'star(t)UrWeb' });
         }}
       >
-        <Link to="/">
-          {localStorage.getItem('user_id') ? (
-            <Button
-              onClick={() => localStorage.removeItem('user_id')}
-              className={'logout_button'}
-              text={'Cerrar Sesión'}
-            />
-          ) : (
-            state.setHeader
-          )}
-        </Link>
+        {localStorage.getItem('user_id') ? (
+          <UserMenu />
+        ) : (
+          <Link to="/">{state.setHeader}</Link>
+        )}
       </h1>
 
-      <ul className={state.itsOn ? 'show' : 'hide'}>
+      <ul id="navbar_ul" className={state.itsOn ? 'show' : 'hide'}>
         <li>
           <Link to={returnRoute}>
             {localStorage.getItem('user_id') ? 'Volver' : 'Iniciar Sesión'}

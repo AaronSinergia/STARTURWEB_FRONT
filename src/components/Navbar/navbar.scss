@@ -1,9 +1,9 @@
 nav {
     display: flex;
     flex-direction: row;
-    position: relative; 
     align-items: center;
     border-bottom: 1px solid var(--strong-green-corpo-color);
+    box-sizing: border-box;
 }
 
 nav::after {
@@ -48,10 +48,9 @@ img[alt="title_logo"] {
     top: 0;
 }
 
-ul {
+#navbar_ul {
     display: flex;
     flex-direction: row;
-    transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
     transform: translateY(-2000%); 
     position: absolute; 
@@ -61,10 +60,9 @@ ul {
     align-items: center;
     text-align: center;
     transition: opacity 1s ease-in-out; 
-    opacity: 0.5;
 }
 
-ul.show {
+#navbar_ul.show {
     opacity: 1;
     transform: translateY(0);
 }

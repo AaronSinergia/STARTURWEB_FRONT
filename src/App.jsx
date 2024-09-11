@@ -8,6 +8,8 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Footer from './components/footer/Footer';
+import UserProfile from './components/UserProfile/UserProfile';
+import UserProjects from './components/UserProjects/UserProjects';
 import './App.scss';
 import './styles/images.scss';
 
@@ -20,6 +22,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/userprojects" element={<UserProjects />} />
           <Route path="/start_project" element={<StartProject />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
