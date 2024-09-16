@@ -29,7 +29,7 @@ export const registerUser = async (navigate) => {
 
 export const loginUser = async (navigate) => {
   event.preventDefault();
-  const username = document.querySelector('#user').value;
+  const username = document.querySelector('#username').value;
   const password = document.querySelector('#password').value;
 
   const response = await fetchFunction({

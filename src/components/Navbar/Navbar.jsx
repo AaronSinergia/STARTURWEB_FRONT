@@ -1,14 +1,25 @@
 import React, { useContext } from 'react';
 import { context } from '../../hooks/context/context';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import UserMenu from '../UserMenu/UserMenu';
 import './navbar.scss';
 
 const Navbar = () => {
   const { state, dispatch } = useContext(context);
+  const navigate = useNavigate();
+
   const returnRoute = localStorage.getItem('user_id')
     ? '/start_project'
     : '/login';
+
+  const handleH1Click = () => {
+    const userId = localStorage.getItem('user_id');
+    if (userId) {
+      navigate('/start_project');
+    } else {
+      navigate('/');
+    }
+  };
 
   return (
     <nav
@@ -31,12 +42,9 @@ const Navbar = () => {
         onMouseLeave={() => {
           dispatch({ type: 'SET_HEADER', payload: 'star(t)UrWeb' });
         }}
+        onClick={handleH1Click}
       >
-        {localStorage.getItem('user_id') ? (
-          <UserMenu />
-        ) : (
-          <Link to="/">{state.setHeader}</Link>
-        )}
+        {localStorage.getItem('user_id') ? <UserMenu /> : state.setHeader}
       </h1>
 
       <ul id="navbar_ul" className={state.itsOn ? 'show' : 'hide'}>

@@ -25,7 +25,7 @@ const UserMenu = () => {
           <li className="userlogged_li">Mis Proyectos</li>
         </Link>
 
-        <Link to="/">
+        <Link to="/login">
           <Button
             onClick={() => {
               localStorage.removeItem('user_id');

@@ -8,12 +8,15 @@
     img[alt="login_icon"] {
       max-width: 100%;
       height: 36px;
-      margin-right: 10px;
+      margin-left: 62px;
+      margin-right: 12px;
     }
     
     .userlogged_title{
-      font-size: 15px;
+      font-size: 17px;
       margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
   
