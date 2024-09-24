@@ -58,3 +58,27 @@ export const loginUser = async (navigate) => {
     console.log('Te has logado con usuario ADMIN');
   }
 };
+
+export const registerNewWebPage = async (state) => {
+  event.preventDefault();
+  const userID = localStorage.getItem('user_id');
+
+  const response = await fetchFunction({
+    endpoint: 'websites',
+    method: 'POST',
+    body: JSON.stringify({
+      favicon: state.headerImage,
+      projectName: state.selectedProjectName,
+      header: state.selectedHeader,
+      body: state.selectedBody,
+      footer: state.selectedFooter,
+      createdBy: userID,
+    }),
+  });
+
+  console.log(response);
+
+  alert(
+    'Selección guardada! Puedes ver todos tus proyectos creados, clicando en tu perfil y luego en "Mis Proyectos". '
+  );
+};

@@ -4,6 +4,8 @@ import Button from '../Button/Button';
 import './UserProfile.scss';
 
 const UserProfile = () => {
+  const userID = localStorage.getItem('user_id');
+
   const [profile, setProfile] = useState({
     username: '',
     password: '',
@@ -37,8 +39,6 @@ const UserProfile = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const userID = localStorage.getItem('user_id');
 
     const { status, response } = await fetchFunction({
       endpoint: `users/${userID}`,

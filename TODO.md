@@ -1,12 +1,12 @@
-Requisitos
+IDEAS:
 
-    Se creará un ReadMe dentro del proyecto que explique a detalle el sentido detrás del proyecto.
+----> SEGUIR: al guardar un proyecto hacer una captura con la imagen de la web y que se vea en mis proyectos
 
+cuando cierro sesión se debe guardar el proyecto en mis proyectos pero aparecer la página de nuevo sin modificar, si me vuelvo a logar y voy a crear proyecto nuevo
 
-    IDEAS:
+en mis proyectos, debo poder seleccionar categorias para cada proyecto con un select por ejemplo y options, y cuando lo haga se debe actualizar mi bbdd de mongo categories
 
-
-IMPORTANAAAANTE: SEGUIR CON LA IMAGEN DEL LOGIN Y CERRAR SESION
+puedo poder buscar por categorías en misproyectos ye ncontrar los proyectos sólo de X categorias
 
     - Poder subir imagenes y que se suban a cloudinary, dependiendo de que sea se guardará en una carpeta u otra revisar, c omo se hace eso.
     

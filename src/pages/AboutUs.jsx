@@ -9,7 +9,7 @@ const AboutUs = () => {
         <img src="../../public/starturweb_logo.png" alt="starturweb_logo" />
         <H2Box
           className="h2_darkgreen"
-          text="star(t)UrWeb nace como un proyecto para de dar al mundo la oportunidad de crear una web sin conocimientos en programación..."
+          text="star(t)UrWeb nace como un proyecto para de dar al mundo la oportunidad de crear una plantilla web sin conocimientos en programación..."
         />
         <img
           src="../../public/assets/imagine_person.png"
@@ -17,12 +17,12 @@ const AboutUs = () => {
         />
         <H2Box
           className="h2_brightgreen"
-          text="Imagina poder tener el control y la facilidad de crear tu web, de una manera profesional."
+          text="Imagina poder tener el control y la facilidad de empezar tu web, de una manera profesional."
         />
         <img src="../../public/assets/cart.png" alt="cart_logo" />
         <H2Box
           className="h2_darkgreen"
-          text="Si crees que puedes o quieres ir más allá te damos la opción a comprarla, y modificarla dónde y cómo quieras, es tuya!"
+          text="Si crees que puedes o quieres ir más allá te damos la opción de descargarla, y modificarla dónde y cómo quieras, es tuya!"
         />
         <img src="../../public/assets/cloud.png" alt="cloud_logo" />
         <H2Box

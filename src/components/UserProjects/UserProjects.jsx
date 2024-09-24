@@ -5,7 +5,7 @@ const UserProjects = () => {
   return (
     <div className="user-projects">
       <h2>Mis Proyectos</h2>
-      {/* AQUI DEBEN IR LOS PROYECTOS QUE EL USUARIO TENGA CREADOS */}
+      <h2>AQUI DEBEN IR LOS PROYECTOS QUE EL USUARIO TENGA CREADOS</h2>
     </div>
   );
 };

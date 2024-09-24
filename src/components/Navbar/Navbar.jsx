@@ -13,12 +13,9 @@ const Navbar = () => {
     : '/login';
 
   const handleH1Click = () => {
-    const userId = localStorage.getItem('user_id');
-    if (userId) {
-      navigate('/start_project');
-    } else {
-      navigate('/');
-    }
+    state.setHeader === 'Volver a Home' && !localStorage.getItem('user_id')
+      ? navigate('/')
+      : null;
   };
 
   return (

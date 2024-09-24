@@ -1,12 +1,16 @@
 import React from 'react';
-import H2Box from '../components/H2Box/H2Box';
-import { CreateWebPage } from '../components/CreateWebPage/CreateWebPage';
+import CreateHeader from '../components/CreateHeader/CreateHeader';
+import CreateBody from '../components/CreateBody/CreateBody';
+import CreateFooter from '../components/CreateFooter/CreateFooter';
+import UndoSaveBtns from '../components/UndoSaveBtns/UndoSaveBtns';
 
 const StartProject = () => {
   return (
     <>
-      <H2Box className="start_webpage_title" text="¿Empezamos?" />
-      <CreateWebPage />
+      <CreateHeader />
+      <CreateBody />
+      <CreateFooter />
+      <UndoSaveBtns />
     </>
   );
 };
