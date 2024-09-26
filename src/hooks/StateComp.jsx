@@ -10,8 +10,6 @@ const initialState = {
   selectedBody: null,
   selectedFooter: null,
   previousState: null,
-  selectedImage:
-    localStorage.getItem('headerImage') || '/assets/icons/nav_icon.png',
   fileUploaded: false,
 };
 
@@ -40,13 +38,6 @@ const reducer = (state, action) => {
         selectedBody: action.payload,
       };
 
-    case 'SET_SELECTED_IMG':
-      return {
-        ...state,
-        previousState: { ...state },
-        selectedImage: action.payload,
-      };
-
     case 'SET_IMG_UPLOADED':
       return {
         ...state,
@@ -65,6 +56,9 @@ const reducer = (state, action) => {
       return state.previousState ? state.previousState : state;
     default:
       return state;
+
+    case 'RESET':
+      return initialState;
   }
 };
 

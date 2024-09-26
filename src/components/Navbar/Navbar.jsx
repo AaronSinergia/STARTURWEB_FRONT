@@ -12,6 +12,11 @@ const Navbar = () => {
     ? '/start_project'
     : '/login';
 
+  const handleReset = () => {
+    dispatch({ type: 'RESET' });
+    localStorage.removeItem('selectedProject');
+  };
+
   const handleH1Click = () => {
     state.setHeader === 'Volver a Home' && !localStorage.getItem('user_id')
       ? navigate('/')
@@ -46,7 +51,7 @@ const Navbar = () => {
 
       <ul id="navbar_ul" className={state.itsOn ? 'show' : 'hide'}>
         <li>
-          <Link to={returnRoute}>
+          <Link to={returnRoute} onClick={handleReset}>
             {localStorage.getItem('user_id') ? 'Volver' : 'Iniciar Sesión'}
           </Link>
         </li>

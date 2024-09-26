@@ -27,9 +27,12 @@ const UndoSaveBtns = () => {
 
   return (
     <div className="undo_save_btns">
-      <button className="undo_button" onClick={handleUndo}>
-        Deshacer Selección
-      </button>
+      <img
+        className="return_btn"
+        src="./assets/icons/return_button.png"
+        alt="return_btn"
+        onClick={handleUndo}
+      />
       <button className="save_button" onClick={() => registerNewWebPage(state)}>
         Guardar Selección
       </button>

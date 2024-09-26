@@ -15,19 +15,6 @@ const CreateHeader = () => {
     localStorage.setItem('selectedProjectName', value);
   };
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        dispatch({ type: 'SET_SELECTED_IMG', payload: reader.result });
-        localStorage.setItem('headerImage', reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-    dispatch({ type: 'SET_IMG_UPLOADED', payload: true });
-  };
-
   const projectName = state.selectedProjectName;
 
   return (
@@ -62,16 +49,9 @@ const CreateHeader = () => {
             <>
               <div className="header_div">
                 <img
-                  src={state.selectedImage || '/assets/icons/nav_icon.png'}
+                  src={'/assets/icons/nav_icon.png'}
                   alt="title_logo_header"
                 />
-                {!state.fileUploaded && (
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageChange}
-                  />
-                )}
                 <input
                   type="text"
                   placeholder="Tu Título Web"
@@ -89,16 +69,9 @@ const CreateHeader = () => {
                   onChange={handleInputChange}
                 />
                 <img
-                  src={state.selectedImage || '/assets/icons/nav_icon.png'}
+                  src={'/assets/icons/nav_icon.png'}
                   alt="title_logo_header"
                 />
-                {!state.fileUploaded && (
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageChange}
-                  />
-                )}
               </div>
             </>
           )}

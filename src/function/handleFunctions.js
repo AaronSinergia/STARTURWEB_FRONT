@@ -2,7 +2,7 @@ import { fetchFunction } from './fetchFunction';
 
 export const registerUser = async (navigate) => {
   event.preventDefault();
-  const username = document.querySelector('#user').value;
+  const username = document.querySelector('#username').value;
   const password = document.querySelector('#password').value;
 
   const response = await fetchFunction({
@@ -19,6 +19,9 @@ export const registerUser = async (navigate) => {
   if (response.status === 201) {
     alert(`Bienvenido ${username}`);
     localStorage.setItem('user_id', response.response._id);
+    localStorage.setItem('user_id', response.response._id);
+    localStorage.setItem('USERNAME', response.response.username);
+
     navigate('/start_project');
   } else {
     alert(
@@ -52,11 +55,6 @@ export const loginUser = async (navigate) => {
   } else {
     alert('El usuario o contraseña no existen');
   }
-
-  if (response.response.user.isAdmin == 'Yes' && response.status === 200) {
-    alert('Te has logado con usuario ADMIN');
-    console.log('Te has logado con usuario ADMIN');
-  }
 };
 
 export const registerNewWebPage = async (state) => {
@@ -67,7 +65,7 @@ export const registerNewWebPage = async (state) => {
     endpoint: 'websites',
     method: 'POST',
     body: JSON.stringify({
-      favicon: state.headerImage,
+      img: state.headerImage,
       projectName: state.selectedProjectName,
       header: state.selectedHeader,
       body: state.selectedBody,
@@ -81,4 +79,15 @@ export const registerNewWebPage = async (state) => {
   alert(
     'Selección guardada! Puedes ver todos tus proyectos creados, clicando en tu perfil y luego en "Mis Proyectos". '
   );
+};
+
+export const getWebPageByID = async (state) => {
+  const userID = localStorage.getItem('user_id');
+
+  const response = await fetchFunction({
+    endpoint: `websites/${userID}`,
+    method: 'GET',
+  });
+
+  return response;
 };
