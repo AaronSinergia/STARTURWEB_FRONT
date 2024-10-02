@@ -44,8 +44,6 @@ export const loginUser = async (navigate) => {
     }),
   });
 
-  console.log(response);
-
   if (response.status === 200) {
     alert(`Bienvenido ${username}`);
     localStorage.setItem('TOKEN', response.response.token);
@@ -81,7 +79,7 @@ export const registerNewWebPage = async (state) => {
   );
 };
 
-export const getWebPageByID = async (state) => {
+export const getWebPageByID = async () => {
   const userID = localStorage.getItem('user_id');
 
   const response = await fetchFunction({
@@ -90,4 +88,47 @@ export const getWebPageByID = async (state) => {
   });
 
   return response;
+};
+
+export const getCategories = async () => {
+  const response = await fetchFunction({
+    endpoint: `categories/`,
+    method: 'GET',
+  });
+
+  return response;
+};
+
+export const populateCategories = async (categoryName, projectID) => {
+  const response = await fetchFunction({
+    endpoint: `categories/populateWebsite/${categoryName}`,
+    method: 'PUT',
+    body: JSON.stringify({
+      websites: projectID,
+    }),
+  });
+
+  console.log(response);
+
+  return response;
+};
+
+export const handleProjectClick = (navigate, project) => {
+  localStorage.setItem('selectedProject', JSON.stringify(project));
+  navigate('/start_project');
+};
+
+export const handleH1Click = (state, navigate) => {
+  state.setHeader === 'Volver a Home' && !localStorage.getItem('user_id')
+    ? navigate('/')
+    : null;
+};
+
+export const getReturnRoute = () => {
+  return localStorage.getItem('user_id') ? '/start_project' : '/login';
+};
+
+export const handleReset = (dispatch) => {
+  dispatch({ type: 'RESET' });
+  localStorage.removeItem('selectedProject');
 };

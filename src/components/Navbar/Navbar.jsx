@@ -2,26 +2,17 @@ import React, { useContext } from 'react';
 import { context } from '../../hooks/context/context';
 import { Link, useNavigate } from 'react-router-dom';
 import UserMenu from '../UserMenu/UserMenu';
+import {
+  getReturnRoute,
+  handleH1Click,
+  handleReset,
+} from '../../function/handleFunctions';
 import './navbar.scss';
 
 const Navbar = () => {
   const { state, dispatch } = useContext(context);
   const navigate = useNavigate();
-
-  const returnRoute = localStorage.getItem('user_id')
-    ? '/start_project'
-    : '/login';
-
-  const handleReset = () => {
-    dispatch({ type: 'RESET' });
-    localStorage.removeItem('selectedProject');
-  };
-
-  const handleH1Click = () => {
-    state.setHeader === 'Volver a Home' && !localStorage.getItem('user_id')
-      ? navigate('/')
-      : null;
-  };
+  const returnRoute = getReturnRoute();
 
   return (
     <nav
@@ -44,14 +35,14 @@ const Navbar = () => {
         onMouseLeave={() => {
           dispatch({ type: 'SET_HEADER', payload: 'star(t)UrWeb' });
         }}
-        onClick={handleH1Click}
+        onClick={() => handleH1Click(state, navigate)}
       >
         {localStorage.getItem('user_id') ? <UserMenu /> : state.setHeader}
       </h1>
 
       <ul id="navbar_ul" className={state.itsOn ? 'show' : 'hide'}>
         <li>
-          <Link to={returnRoute} onClick={handleReset}>
+          <Link to={returnRoute} onClick={() => handleReset(dispatch)}>
             {localStorage.getItem('user_id') ? 'Volver' : 'Iniciar Sesión'}
           </Link>
         </li>

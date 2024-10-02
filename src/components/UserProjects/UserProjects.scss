@@ -1,25 +1,79 @@
 .user_projects {
   display: flex;
   flex-direction: column;
-    width: 330px;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: var(--white-corpo-color);
-    margin-top: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: var(--white-corpo-color);
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  .user_projects > ul {
-margin-right: 35px;
-  }
+.user_projects > h2 {
+  color: var(--strong-green-corpo-color);
+  font-size: 35px;
+  margin-top: 0;
+}
 
-  .user_projects > h2 {
-    text-align: center;
-    color: var(--strong-green-corpo-color);
-    font-size: 35px;
-    margin-top: 0;
-    margin-bottom: 0px;
+.user_projects > ul {
+  display: flex; 
+  flex-direction: column; 
+  gap: 18px;
+  list-style-type: none;
+  padding: 0; 
+  margin: 20px 0;
+  width: 100%;
+}
+
+.user_projects li {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  background-color: var(--low-green-corpo-color);
+  color: var(--white-corpo-color);
+  padding: 15px;
+  border: 1px solid var(--white-corpo-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+
+  .project_name { 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-right: 10px;
   }
-  
+}
+
+
+
+.user_projects select {
+  background-color: var(--white-corpo-color);
+  color: var(--low-green-corpo-color);
+  padding: 5px; 
+  border: 1px solid var(--strong-green-corpo-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; 
+  text-align: center;
+}
+
+.user_projects li:hover {
+  background-color: var(--strong-green-corpo-color);
+  color: var(--light-green-corpo-color);
+}
+
+.no_projects_available{
+  color: var(--strong-green-corpo-color);
+  border: 1px solid var(--strong-green-corpo-color);
+  border-radius: 10px;
+  padding: 20px; 
+  font-size: 20px; 
+  font-weight: 800;
+}

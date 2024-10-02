@@ -1,10 +1,9 @@
 IDEAS:
 
 
-
-en mis proyectos, debo poder seleccionar categorias para cada proyecto con un select por ejemplo y options, y cuando lo haga se debe actualizar mi bbdd de mongo categories
-
 puedo poder buscar por categorías en misproyectos ye ncontrar los proyectos sólo de X categorias
+
+arreglar que el nombre del proyecto se borre
 
 
 

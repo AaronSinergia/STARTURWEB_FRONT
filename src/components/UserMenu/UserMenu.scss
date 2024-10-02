@@ -35,6 +35,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease, visibility 0s linear 1s;
+    z-index: 999999999;
   }
 
   #dropdown_menu.shownavbar {
