@@ -35,7 +35,6 @@ const UserMenu = () => {
               localStorage.removeItem('selectedBody');
               localStorage.removeItem('headerImage');
               localStorage.removeItem('selectedProject');
-              localStorage.removeItem('selectedProjectName');
             }}
             className={'logout_button'}
             text={'Cerrar Sesión'}

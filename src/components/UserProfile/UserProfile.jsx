@@ -55,7 +55,7 @@ const UserProfile = () => {
 
   return (
     <div className="user-profile">
-      <h2>Mi Perfil</h2>
+      <h2 className="title_myprofile">Mi Perfil</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">CAMBIAR USUARIO</label>

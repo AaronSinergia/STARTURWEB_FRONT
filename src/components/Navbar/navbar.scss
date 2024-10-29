@@ -18,7 +18,9 @@ nav::after {
 }
 
 img[alt="title_logo"] {
+    margin-top: 20px;  
     width: 40px;
+    margin-bottom: 18px;
     margin-left: 25px;
     cursor: pointer;
     animation: blink 3s infinite; // quitar este efecto tan fuerte y poner en 10 segundos en modo ventana
@@ -37,15 +39,15 @@ img[alt="title_logo"] {
 }
 
 .header_h1 {
-    position: relative;
+    position: absolute;
     color: var(--strong-green-corpo-color);
     font-family: 'Lobster Two', cursive;
     font-size: 31.5px;
     cursor: pointer;
-    margin-left: 130px;
+    top: 0;  
+    right: 20px;
     overflow: hidden; 
     transition: transform 0.3s ease, opacity 0.3s ease;
-    top: 0;
 }
 
 #navbar_ul {
@@ -54,7 +56,6 @@ img[alt="title_logo"] {
     opacity: 0;
     transform: translateY(-2000%); 
     position: absolute; 
-    // top: 0;
     left: 50px; 
     justify-content: center;
     align-items: center;
@@ -94,3 +95,46 @@ li {
   a:hover {
     text-decoration: underline; 
   }
+
+  // Media Queries
+  @media screen and (min-width: 1350px) and (max-width: 2300px) {
+    #navbar_ul {
+        li {
+            padding: 180px;
+          }
+    }
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1350px) {
+    #navbar_ul {
+        li {
+            padding: 120px;
+          }
+    }
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1150px) {
+    #navbar_ul {
+        li {
+            padding: 100px;
+          }
+    }
+}
+
+
+@media screen and (min-width: 741px) and (max-width: 900px) {
+    #navbar_ul {
+        li {
+            padding: 70px;
+          }
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 740px) {
+    #navbar_ul {
+        li {
+            padding: 48px;
+          }
+    }
+}

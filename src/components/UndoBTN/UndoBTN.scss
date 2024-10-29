@@ -1,0 +1,17 @@
+
+.undo_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .return_btn {
+    position: fixed;
+    width: 40px;
+    top: 90px;
+    left: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  

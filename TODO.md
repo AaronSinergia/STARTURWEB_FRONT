@@ -1,13 +1,8 @@
 IDEAS:
 
+1) MOVER EL NAVBAR A LA IZQUIERDA Y ADAPTARLO PARA QUE SE VEA BONITO
 
-puedo poder buscar por categorías en misproyectos ye ncontrar los proyectos sólo de X categorias
-
-arreglar que el nombre del proyecto se borre
-
+2) ADAPTAR EL RESTO DE CONTENIDO AL NAVBAR DE 1000PX EN ADELANTE
 
 
-    - Poner un aviso que si estás en modo web crearás la web en ese modo, y si es mobile en mobile. Las mediaquery las tendrá que hacer por su cuenta.
-
-
-    - El efecto hover de la chic, y de contact solo en modo web
+    FINALMENTE: crear docu del proyecto

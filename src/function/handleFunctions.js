@@ -99,22 +99,10 @@ export const getCategories = async () => {
   return response;
 };
 
-export const populateCategories = async (categoryName, projectID) => {
-  const response = await fetchFunction({
-    endpoint: `categories/populateWebsite/${categoryName}`,
-    method: 'PUT',
-    body: JSON.stringify({
-      websites: projectID,
-    }),
-  });
-
-  console.log(response);
-
-  return response;
-};
-
 export const handleProjectClick = (navigate, project) => {
   localStorage.setItem('selectedProject', JSON.stringify(project));
+  localStorage.setItem('projectNameClicked', project.projectName);
+
   navigate('/start_project');
 };
 
@@ -131,4 +119,77 @@ export const getReturnRoute = () => {
 export const handleReset = (dispatch) => {
   dispatch({ type: 'RESET' });
   localStorage.removeItem('selectedProject');
+  localStorage.removeItem('projectNameClicked');
+};
+
+export const handleCategoryChange = (
+  e,
+  project,
+  projects,
+  dispatch,
+  categories
+) => {
+  const selectedCategoryName = e.target.value;
+
+  const updatedProjects = Array.isArray(projects)
+    ? projects.map((p) => {
+        if (p._id === project._id) {
+          return { ...p, selectedCategoryName };
+        }
+        return p;
+      })
+    : [];
+
+  dispatch({
+    type: 'SET_PROJECTS',
+    payload: updatedProjects,
+  });
+
+  const categoriesArray = Object.values(categories);
+  const selectedCategoryId = categoriesArray.find(
+    (category) => category.name === selectedCategoryName
+  )?._id;
+
+  if (selectedCategoryId) {
+    populateCategories(selectedCategoryId, project._id, dispatch);
+  } else {
+    console.warn('Selected category ID not found for:', selectedCategoryName);
+  }
+};
+
+export const populateCategories = async (categoryName, projectID, dispatch) => {
+  const response = await fetchFunction({
+    endpoint: `categories/populateWebsite/${categoryName}`,
+    method: 'PUT',
+    body: JSON.stringify({
+      websites: projectID,
+    }),
+  });
+
+  const categoryNameResponse = response.response.name;
+
+  dispatch({
+    type: 'SET_POPULATE_CATEGORIES',
+    payload: categoryNameResponse,
+  });
+
+  return response;
+};
+
+export const handleDeleteProject = async (project, projects, dispatch) => {
+  try {
+    const response = await fetchFunction({
+      endpoint: `websites/${project._id}`,
+      method: 'DELETE',
+    });
+
+    dispatch({
+      type: 'SET_PROJECTS',
+      payload: projects.filter((proj) => proj._id !== project._id),
+    });
+
+    alert('El proyecto ha sido borrado con éxito.');
+  } catch (error) {
+    console.error('Error al eliminar el proyecto:', error);
+  }
 };

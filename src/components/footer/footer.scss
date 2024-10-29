@@ -20,26 +20,39 @@ footer {
   color: var(--low-green-corpo-color);
 }
 
-@media screen and (min-width: 1024px) and (max-width: 3328px) {
+// Media Queries
+@media screen and (min-width: 1200px) and (max-width: 2300px) {
   footer {
-    margin-top: $margin-top-xsmall;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+  footer {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1100px) {
+  footer {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1024px) {
   footer {
-    margin-top: $margin-top-small;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 960px) {
   footer {
-    margin-top: $margin-top-medium;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   footer {
-    margin-top: $margin-top-large;
+    margin: 0;
   }
 }

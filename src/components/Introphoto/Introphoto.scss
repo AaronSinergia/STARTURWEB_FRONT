@@ -2,21 +2,20 @@
     position: relative;
     width: 98%;
     margin-top: 70px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     margin-left: 3px;
     display: inline-block;
 }
 
 .girl_photo {
+    display: block;
     cursor: pointer;
     width: 100%;
-    display: block;
-    // filter: grayscale(100%); /// SOOOOOOLO EN MOOOODO WEBBB
     transition: filter 0.4s ease-in-out;
     animation: blink 3s infinite; 
 }
 
-.textcontent {  /// SOOOOOOLO EN MOOOODO MOBILEEEEE
+.textcontent { 
     font-family: 'Lobster Two', cursive;
     position: absolute;
     font-size: 30px;
@@ -27,9 +26,6 @@
     padding: 10px; 
 }
 
-// .photo_container:hover .girl_photo {/// SOOOOOOLO EN MOOOODO WEBBB
-//     filter: grayscale(0%);
-// }
 
 .photo_container::before {
     font-family: 'Lobster Two', cursive;
@@ -51,4 +47,88 @@
 
 .photo_container:hover::before {
     opacity: 1;
+}
+
+// Media Queries
+@media screen and (min-width: 1200px) and (max-width: 2300px) {
+    .girl_photo {
+        width: 62%;
+        margin-left: 180px;
+        filter: grayscale(100%);
+    }
+    
+    .photo_container:hover .girl_photo {
+        filter: grayscale(0%);
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+    .girl_photo {
+        width: 62%;
+        margin-left: 180px;
+        filter: grayscale(100%);
+    }
+    
+    .photo_container:hover .girl_photo {
+        filter: grayscale(0%);
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .photo_container {
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .girl_photo {
+        width: 62%;
+        margin-left: 180px;
+        filter: grayscale(100%);
+    }
+    
+    .photo_container:hover .girl_photo {
+        filter: grayscale(0%);
+    }
+}
+
+
+///// HASTA AQUÍ MOVILE/TABLET
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    .photo_container {
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    .girl_photo {
+        width: 70%;
+        margin-left: 110px;
+        filter: grayscale(100%);
+    }
+    
+    .photo_container:hover .girl_photo {
+        filter: grayscale(0%);
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 700px) {
+    .photo_container {
+        margin-top: 40px;
+        margin-bottom: 70px;
+    }
+
+    .girl_photo {
+        width: 80%;
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 540px) {
+    .photo_container {
+        margin-bottom: 80px;
+    }
+
+    .girl_photo {
+        width: 90%;
+        margin-left: 25px;
+    }
 }

@@ -1,41 +1,43 @@
+.about_img {
+    position: relative;
+}
+
 img[alt="starturweb_logo"] {
-  position: absolute;
-    width: 60px;
-    margin-top: 92px;
-    margin-left: 305px;
+    position: absolute;
+    width: 55px;
+    top: 135px; 
+    right: 1px;
 }
 
 img[alt="imagine_person_logo"] {
-  position: absolute;
-    width: 70px;
-    height: 140px;
-    margin-left: 12px;
-    bottom: 295px;
+    position: absolute;
+    width: 60px;
+    height: 130px;
+    top: 230px;
+    right: 298px;
 }
 
 img[alt="cart_logo"] {
-  position: absolute;
+    position: absolute;
     width: 50px;
-    margin-left: 315px;
-    bottom: 130px;
+    top: 485px;
+    right: 1px;
 }
 
 img[alt="cloud_logo"] {
-  position: absolute;
+    position: absolute;
     width: 200px;
-    top: 770px;
-    right: 210px;
+    top: 630px; 
+    right: 180px;
     filter: opacity(90%);
 }
-
-
 
 .contact_article > img {
     width: 80px;
     margin-left: 20px;
-    // filter: grayscale(100%); SOOOOOLO EN MODO WEEEB
     cursor: pointer;
 }
+
 
 .contact_article > img[alt="linkedin_contact_logo"] {
     filter: brightness(70%);
@@ -59,6 +61,140 @@ img[alt="cloud_logo"] {
     }
   }
 
-// .contact_article > img:hover { SOOOOOLO EN MODO WEEEB
-//     filter: grayscale(0%);
-// }
+
+// // Media Queries
+@media screen and (min-width: 1200px) and (max-width: 2300px) {
+    img[alt="starturweb_logo"] {
+        top: 183px;
+        right: 550px;
+        width: 60px;
+    }
+
+    img[alt="imagine_person_logo"] {
+        top: 60px;
+        right: 300px;
+        width: 70px;
+        height: 140px;
+      }
+      
+      img[alt="cart_logo"] {
+        width: 60px;
+        top: 440px;
+        right: 550px;
+      }
+      
+      img[alt="cloud_logo"] {
+        width: 220px;
+        top: 240px;
+        right: 55px;
+      }
+    
+    .contact_article > img {
+        width: 80px;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    img[alt="starturweb_logo"] {
+        top: 183px;
+        right: 550px;
+        width: 60px;
+    }
+
+    img[alt="imagine_person_logo"] {
+        top: 60px;
+        right: 300px;
+        width: 70px;
+        height: 140px;
+      }
+      
+      img[alt="cart_logo"] {
+        width: 60px;
+        top: 440px;
+        right: 550px;
+      }
+      
+      img[alt="cloud_logo"] {
+        width: 220px;
+        top: 240px;
+        right: 55px;
+      }
+
+    .contact_article > img {
+        width: 80px;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        justify-self: end;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+    img[alt="starturweb_logo"] {
+        top: 183px;
+        right: 550px;
+        width: 60px;
+    }
+
+    img[alt="imagine_person_logo"] {
+        top: 60px;
+        right: 300px;
+        width: 70px;
+        height: 140px;
+      }
+      
+      img[alt="cart_logo"] {
+        width: 60px;
+        top: 440px;
+        right: 550px;
+      }
+      
+      img[alt="cloud_logo"] {
+        width: 220px;
+        top: 240px;
+        right: 55px;
+      }
+
+    .contact_article > img {
+        width: 80px;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 655px) and (max-width: 770px) {
+.contact_article > img {
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+}
+
+@media screen and (min-width: 560px) and (max-width: 655px) {
+.contact_article > img {
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+}
+
+@media screen and (min-width: 480px) and (max-width: 560px) {   
+  .contact_article > img {
+      width: 80px;
+      margin-left: 20px;
+      cursor: pointer;
+  }
+}

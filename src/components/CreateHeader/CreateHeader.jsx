@@ -14,8 +14,8 @@ const CreateHeader = () => {
     dispatch({ type: 'SET_PROJECTNAME', payload: value });
     localStorage.setItem('selectedProjectName', value);
   };
-
   const projectName = state.selectedProjectName;
+  const projectNameClicked = localStorage.getItem('projectNameClicked');
 
   return (
     <>
@@ -30,7 +30,7 @@ const CreateHeader = () => {
             }}
           >
             <img src="/assets/icons/nav_icon.png" alt="title_logo_header" />
-            <h3>Tu Título Web</h3>
+            <h3>{projectName ? projectName : 'Tu Título Web'}</h3>
           </div>
           <div
             className="header_div_two"
@@ -39,7 +39,7 @@ const CreateHeader = () => {
               localStorage.setItem('selectedHeader', state.selectedHeader);
             }}
           >
-            <h3>Tu Título Web</h3>
+            <h3>{projectName ? projectName : 'Tu Título Web'}</h3>
             <img src="/assets/icons/nav_icon.png" alt="title_logo_header" />
           </div>
         </section>
@@ -54,6 +54,7 @@ const CreateHeader = () => {
                 />
                 <input
                   type="text"
+                  value={projectNameClicked}
                   placeholder="Tu Título Web"
                   onChange={handleInputChange}
                 />
@@ -65,7 +66,8 @@ const CreateHeader = () => {
               <div className="header_div_two">
                 <input
                   type="text"
-                  placeholder={projectName ? projectName : 'Tu Título Web'}
+                  value={projectNameClicked}
+                  placeholder="Tu Título Web"
                   onChange={handleInputChange}
                 />
                 <img

@@ -1,34 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   getCategories,
   getWebPageByID,
+  handleCategoryChange,
+  handleDeleteProject,
   handleProjectClick,
-  populateCategories,
 } from '../../function/handleFunctions';
-import { useNavigate } from 'react-router-dom';
+import { context } from '../../hooks/context/context';
+import Button from '../Button/Button';
 import './UserProjects.scss';
 
 const UserProjects = () => {
   const navigate = useNavigate();
-  const [projects, setProjects] = useState([]);
+  const { state, dispatch } = useContext(context);
+  const { projects } = state;
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const projectData = await getWebPageByID();
-        if (
-          projectData &&
-          projectData.response &&
-          projectData.response.websites
-        ) {
-          setProjects(projectData.response.websites);
+        if (projectData?.response?.websites) {
+          dispatch({
+            type: 'SET_PROJECTS',
+            payload: projectData.response.websites,
+          });
         } else {
           console.log('No se encontraron proyectos.');
         }
 
         const categoryData = await getCategories();
-        if (categoryData && categoryData.response) {
+        if (categoryData?.response) {
           setCategories(categoryData.response);
         } else {
           console.log('No se encontraron categorías.');
@@ -39,52 +43,70 @@ const UserProjects = () => {
     };
 
     fetchData();
-  }, []);
+  }, [dispatch]);
 
-  const handleCategoryChange = (e, project) => {
-    const selectedCategoryName = e.target.value;
+  const filteredProjects = projects.filter((project) => {
+    if (!selectedCategory) return true;
 
-    localStorage.setItem(
-      `selectedCategoryName_${project._id}`,
-      selectedCategoryName
+    const category = categories.find(
+      (category) => category.name === selectedCategory
     );
 
-    setProjects((prevProjects) =>
-      prevProjects.map((p) => {
-        if (p._id === project._id) {
-          return { ...p, selectedCategoryName };
-        }
-        return p;
-      })
-    );
-
-    const selectedCategoryId = categories.find(
-      (category) => category.name === selectedCategoryName
-    )._id;
-
-    populateCategories(selectedCategoryId, project._id);
-  };
+    return category?.websites.some((web) => web._id === project._id);
+  });
 
   return (
     <div className="user_projects">
       <h2>Mis Proyec(t)os</h2>
-      {projects.length > 0 ? (
+      <select
+        name="categorias"
+        id="categorias"
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+      >
+        <option value="">Selecciona una categoría</option>
+        {categories.map((category) => (
+          <option key={category._id} value={category.name}>
+            {category.name}
+          </option>
+        ))}
+      </select>
+      {filteredProjects.length > 0 ? (
         <ul>
-          {projects.map((project) => {
-            const savedCategoryName =
-              localStorage.getItem(`selectedCategoryName_${project._id}`) || '';
+          {filteredProjects.map((project) => {
+            const projectCategory = categories.find((category) =>
+              category.websites.some((web) => web._id === project._id)
+            );
+
             return (
               <li
                 key={project._id}
                 onClick={() => handleProjectClick(navigate, project)}
               >
+                <Button
+                  title={'Borrar proyecto'}
+                  className={'delete_btn'}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleDeleteProject(project, projects, dispatch);
+                  }}
+                  text={'X'}
+                />
                 <span className="project_name">{project.projectName}</span>
                 <select
                   name="categoria"
                   id="categoria"
                   onClick={(event) => event.stopPropagation()}
-                  onChange={(e) => handleCategoryChange(e, project)}
-                  value={savedCategoryName}
+                  onChange={(e) =>
+                    handleCategoryChange(
+                      e,
+                      project,
+                      projects,
+                      dispatch,
+                      categories
+                    )
+                  }
+                  value={state.populatedCategory || projectCategory?.name || ''}
                 >
                   {categories.map((category) => (
                     <option key={category._id} value={category.name}>

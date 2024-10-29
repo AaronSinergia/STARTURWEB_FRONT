@@ -11,6 +11,8 @@ const initialState = {
   selectedFooter: null,
   previousState: null,
   fileUploaded: false,
+  projects: [],
+  populatedCategory: '',
 };
 
 const reducer = (state, action) => {
@@ -23,6 +25,10 @@ const reducer = (state, action) => {
       return { ...state, setHeader: action.payload };
     case 'SET_PROJECTNAME':
       return { ...state, selectedProjectName: action.payload };
+    case 'SET_PROJECTS':
+      return { ...state, projects: action.payload };
+    case 'SET_POPULATE_CATEGORIES':
+      return { ...state, populatedCategory: action.payload };
 
     case 'SET_SELECTED_HEADER':
       return {
