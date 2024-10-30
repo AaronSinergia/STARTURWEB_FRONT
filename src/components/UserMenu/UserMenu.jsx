@@ -10,7 +10,7 @@ const UserMenu = () => {
 
   return (
     <div
-      className="user-menu"
+      className="user_menu"
       onMouseEnter={() => dispatch({ type: 'SET_ITSFOLDED', payload: true })}
       onMouseLeave={() => dispatch({ type: 'SET_ITSFOLDED', payload: false })}
     >

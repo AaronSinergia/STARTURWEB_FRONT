@@ -14,6 +14,7 @@ const CreateHeader = () => {
     dispatch({ type: 'SET_PROJECTNAME', payload: value });
     localStorage.setItem('selectedProjectName', value);
   };
+
   const projectName = state.selectedProjectName;
   const projectNameClicked = localStorage.getItem('projectNameClicked');
 

@@ -23,7 +23,7 @@ img[alt="title_logo"] {
     margin-bottom: 18px;
     margin-left: 25px;
     cursor: pointer;
-    animation: blink 3s infinite; // quitar este efecto tan fuerte y poner en 10 segundos en modo ventana
+    animation: blink 3s infinite;
 }
 
 @keyframes blink {
@@ -97,24 +97,117 @@ li {
   }
 
   // Media Queries
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  
   @media screen and (min-width: 1350px) and (max-width: 2300px) {
+    nav {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: 0px;
+        height: 919px;
+        width: 100px;
+        border-bottom: none;
+    }
+
+    nav::after {
+        content: "";
+        position: absolute;
+        left: 100px;
+        top: 0px; 
+        width: 7px;
+        height: 100%; 
+        background-image: linear-gradient(to bottom, var(--low-green-corpo-color), var(--white-corpo-color));
+    }
+
+    img[alt="title_logo"] {
+        animation: blink 8s infinite;
+        margin-left: 0px;
+        width: 55px;
+    }
+
+    .header_h1 {
+        position: relative;
+        font-size: 31.5px;
+        top: 580px;  
+        margin-left: 50px;
+        writing-mode: vertical-rl;
+    }
+
     #navbar_ul {
+        width: 100px;
+        flex-direction: column; 
+        margin-top: 160px;
+        left: 0;
+        padding: 0;
+
         li {
-            padding: 180px;
+            position: relative;
+            font-size: 20px;
+            padding: 50px 8px;
           }
     }
 }
 
-@media screen and (min-width: 1150px) and (max-width: 1350px) {
+@media screen and (min-width: 1000px) and (max-width: 1350px) {
+    nav {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: 0px;
+        height: 919px;
+        width: 100px;
+        border-bottom: none;
+    }
+
+    nav::after {
+        content: "";
+        position: absolute;
+        left: 100px;
+        top: 0px; 
+        width: 7px;
+        height: 100%; 
+        background-image: linear-gradient(to bottom, var(--low-green-corpo-color), var(--white-corpo-color));
+    }
+
+    img[alt="title_logo"] {
+        animation: blink 8s infinite;
+        margin-left: 0px;
+        width: 55px;
+    }
+
+    .header_h1 {
+        position: relative;
+        font-size: 31.5px;
+        top: 580px;  
+        margin-left: 50px;
+        writing-mode: vertical-rl;
+    }
+
     #navbar_ul {
+        width: 100px;
+        flex-direction: column; 
+        margin-top: 160px;
+        left: 0;
+        padding: 0;
+
         li {
-            padding: 120px;
+            position: relative;
+            font-size: 20px;
+            padding: 50px 8px;
           }
     }
 }
 
 
-@media screen and (min-width: 900px) and (max-width: 1150px) {
+@media screen and (min-width: 900px) and (max-width: 1000px) {
     #navbar_ul {
         li {
             padding: 100px;
