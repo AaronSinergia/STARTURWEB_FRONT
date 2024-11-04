@@ -31,7 +31,7 @@ const CreateFooter = () => {
           </h3>
         </footer>
       ) : (
-        <section className="display_selected_header">
+        <section className="display_selected_footer">
           {state.selectedFooter === 'style1' && <></>}
           {state.selectedFooter === 'style2' && <></>}
         </section>

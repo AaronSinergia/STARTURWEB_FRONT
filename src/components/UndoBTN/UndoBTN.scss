@@ -1,17 +1,62 @@
-
-.undo_btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
   .return_btn {
     position: fixed;
     width: 40px;
     top: 90px;
-    left: 5px;
+    left: 1%;
     opacity: 0.8;
     cursor: pointer;
   }
   
+  // Media Queries
+//
+//
+//
+//
+//
+//
+//
+
+@media screen and (min-width: 1200px) and (max-width: 2300px) {
+  .return_btn {
+    width: 50px;
+    top: 40px;
+    left: 95%;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+  .return_btn {
+    width: 50px;
+    top: 40px;
+    left: 95%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+  .return_btn {
+    width: 50px;
+    top: 40px;
+    left: 95%;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1000px) {
+  .return_btn {
+    top: 90px;
+    left: 1%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .return_btn {
+    top: 90px;
+    left: 1%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .return_btn {
+    top: 90px;
+    left: 1%;
+  }
+}

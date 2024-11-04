@@ -14,14 +14,12 @@ const UndoBTN = () => {
   };
 
   return (
-    <div className="undo_btn">
-      <img
-        className="return_btn"
-        src="./assets/icons/return_button.png"
-        alt="return_btn"
-        onClick={handleUndo}
-      />
-    </div>
+    <img
+      className="return_btn"
+      src="./assets/icons/return_button.png"
+      alt="return_btn"
+      onClick={handleUndo}
+    />
   );
 };
 

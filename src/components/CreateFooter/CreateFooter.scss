@@ -16,7 +16,7 @@ $margin-top-xsmall: 10px;
   text-align: center;
   max-width: 600px;
   width: 95%;
-  margin: 0 10px 0 10px;
+  // margin: 0 10px 0 10px;
   justify-self: center;
 }
 
@@ -27,26 +27,26 @@ $margin-top-xsmall: 10px;
   color: var(--low-green-corpo-color);
 }
 
-// @media screen and (min-width: 1024px) and (max-width: 3328px) {
-//   footer {
-//     margin-top: $margin-top-xsmall;
-//   }
-// }
+@media screen and (min-width: 1000px) and (max-width: 3328px) {
+  .footer_section {
+    margin: 0 0px 0 0px;
+  }
+}
 
-// @media screen and (min-width: 960px) and (max-width: 1024px) {
-//   footer {
-//     margin-top: $margin-top-small;
-//   }
-// }
+@media screen and (min-width: 960px) and (max-width: 1100px) {
+  .footer_section {
+    margin: 0 10px 0 10px;
+  }
+}
 
-// @media screen and (min-width: 768px) and (max-width: 960px) {
-//   footer {
-//     margin-top: $margin-top-medium;
-//   }
-// }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .footer_section {
+    margin: 0 10px 0 10px;
+  }
+}
 
-// @media screen and (min-width: 480px) and (max-width: 768px) {
-//   footer {
-//     margin-top: $margin-top-large;
-//   }
-// }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .footer_section {
+    margin: 0 10px 0 10px;
+  }
+}

@@ -18,6 +18,18 @@
   --strong-green-corpo-color: #386641;
 }
 
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/public/assets/fonts/LobsterTwo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'EB Garamond', sans-serif;
+}
+
 * {
   scrollbar-width: thin; 
   scrollbar-color: var(--white-corpo-color) var(--light-green-corpo-color); 

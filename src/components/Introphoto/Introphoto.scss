@@ -1,10 +1,10 @@
 .photo_container {
+    display: inline-block;
     position: relative;
     width: 98%;
     margin-top: 70px;
     margin-bottom: 80px;
     margin-left: 3px;
-    display: inline-block;
 }
 
 .girl_photo {
@@ -116,14 +116,8 @@
     }
 
     .girl_photo {
-        width: 72%;
-        margin-left: 110px;
-    }
-
-    .textcontent { 
-        top: 320px;
-        left: 390px;
-        transform: translate(-50%, -50%);
+        width: 60%;
+        margin-left: 170px;
     }
 }
 
