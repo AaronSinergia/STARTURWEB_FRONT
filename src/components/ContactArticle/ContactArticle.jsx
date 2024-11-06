@@ -9,7 +9,7 @@ const ContactArticle = () => {
       <article className="contact_article">
         <section className="contact_img">
           <img
-            src="./public/assets/icons/linkedin_contact.png"
+            src="../assets/icons/linkedin_contact.png"
             alt="linkedin_contact_logo"
             onClick={() =>
               handleImageUrlClick(
@@ -19,13 +19,13 @@ const ContactArticle = () => {
           />
 
           <img
-            src="./public/assets/icons/mail_contact.png"
+            src="../assets/icons/mail_contact.png"
             alt="mail"
             onClick={() => handleImageUrlClick('mailto:a.carrasco9@me.com')}
           />
 
           <img
-            src="./public/assets/icons/whatsapp_contact.png"
+            src="../assets/icons/whatsapp_contact.png"
             alt="whatsapp_contact_logo"
             onClick={() =>
               (window.location.href = `https://wa.me/${config.whatsappNumber}`)
@@ -33,7 +33,7 @@ const ContactArticle = () => {
           />
 
           <img
-            src="./public/assets/icons/down_arrow.png"
+            src="../assets/icons/down_arrow.png"
             alt="downarrow_contact_logo"
           />
         </section>

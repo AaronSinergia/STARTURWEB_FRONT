@@ -25,13 +25,13 @@ const AboutArticle = () => {
           </h3>
         </section>
         <section className="about_img">
-          <img src="../../public/starturweb_logo.png" alt="starturweb_logo" />
+          <img src="../public/starturweb_logo.png" alt="starturweb_logo" />
           <img
-            src="../../public/assets/imagine_person.png"
+            src="../public/assets/imagine_person.png"
             alt="imagine_person_logo"
           />
-          <img src="../../public/assets/cart.png" alt="cart_logo" />
-          <img src="../../public/assets/cloud.png" alt="cloud_logo" />
+          <img src="../public/assets/cart.png" alt="cart_logo" />
+          <img src="../public/assets/cloud.png" alt="cloud_logo" />
         </section>
       </article>
     </>
