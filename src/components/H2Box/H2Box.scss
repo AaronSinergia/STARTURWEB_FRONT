@@ -22,105 +22,77 @@ h2 {
     color: var(--strong-green-corpo-color);
 }
 
-
-.contact_article {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.h2_darkgreen{
-    font-family: 'EB Garamond', cursive;
-    color: var(--white-corpo-color);
-    background: var(--light-green-corpo-color);
-    padding: 20px;
-    margin: 40px;
-}
-
-.h2_brightgreen{
-    font-family: 'EB Garamond', cursive;
-    color: var(--low-green-corpo-color);
-    background: var(--strong-green-corpo-color);
-    padding: 20px;
-    margin: 40px;
-}
-
-.contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-    margin: 10px;
-}
-
-.contact_article > h2:hover {
-    color: var(--white-corpo-color);
-    background-color: var(--gold-corpo-color);
-    cursor:help;
-    animation: blink 5s infinite; 
-}
-
 .start_webpage_title {
     font-size: 20px;
     color: var(--strong-green-corpo-color);
     margin: 7px 140px 20px 140px;
 }
 
-// Media Queries
-@media screen and (min-width: 1400px) and (max-width: 3400px) {
 
-     .about_title, .login_title, .contact_title {
+
+// Media Queries
+///
+/// 
+/// 
+/// 
+/// 
+///
+//
+
+@media screen and (min-width: 1400px) and (max-width: 3400px) {
+     .about_title, .login_title {
         margin-top: 70px;
-        margin-left: 480px;
-        margin-right: 480px;
+        margin-left: 350px;
+        margin-right: 350px;
     }  
 
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 28px;
-        max-width: 300px; 
-        min-width: 300px;
-    }   
+ .contact_title {
+        margin-top: 70px;
+        margin-left: 450px;
+        margin-right: 350px;
+    }  
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-
-    .about_title, .login_title, .contact_title {
+    .about_title, .login_title {
         margin-top: 70px;
-        margin-left: 390px;
-        margin-right: 390px;
+        margin-left: 250px;
+        margin-right: 250px;
     }  
 
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 28px;
-        max-width: 300px; 
-        min-width: 300px;
-    }   
+    .contact_title {
+        margin-top: 70px;
+        margin-left: 350px;
+        margin-right: 250px;
+    }  
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1200px) {
-     .about_title, .login_title, .contact_title {
+     .about_title, .login_title {
         margin-top: 70px;
-        margin-left: 300px;
-        margin-right: 300px;
+        margin-left: 250px;
+        margin-right: 250px;
     }  
 
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 28px;
-        max-width: 300px; 
-        min-width: 300px;
-    }   
+    .contact_title {
+        margin-top: 70px;
+        margin-left: 280px;
+        margin-right: 200px;
+    }  
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1100px) {
-    .about_title, .login_title, .contact_title {
+    .about_title, .login_title {
         margin-top: 70px;
-        margin-left: 300px;
-        margin-right: 300px;
+        margin-left: 240px;
+        margin-right: 150px;
     }  
 
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 28px;
-        max-width: 300px; 
-        min-width: 300px;
-    }   
+ .contact_title {
+        margin-top: 70px;
+        margin-left: 240px;
+        margin-right: 150px;
+    }  
 }
 
 @media screen and (min-width: 900px) and (max-width: 1000px) {
@@ -129,12 +101,6 @@ h2 {
         margin-left: 220px;
         margin-right: 220px;
     }    
-
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 30px;
-        max-width: 300px; 
-        min-width: 300px;
-    }   
 }
 
 @media screen and (min-width: 768px) and (max-width: 900px) {
@@ -143,19 +109,6 @@ h2 {
         margin-left: 100px;
         margin-right: 120px;
     }    
-
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 28px;
-        max-width: 300px; 
-        min-width: 300px;
-    }    
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    
-    .contact_article > .h2_darkgreen, .contact_article > .h2_brightgreen {
-        margin: 28px;
-        max-width: 300px; 
-        min-width: 300px;
-    }    
-}
+@media screen and (min-width: 480px) and (max-width: 768px) {}

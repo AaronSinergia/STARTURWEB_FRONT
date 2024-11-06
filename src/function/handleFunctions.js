@@ -193,3 +193,7 @@ export const handleDeleteProject = async (project, projects, dispatch) => {
     console.error('Error al eliminar el proyecto:', error);
   }
 };
+
+export const handleImageUrlClick = (url) => {
+  window.open(url, '_blank');
+};

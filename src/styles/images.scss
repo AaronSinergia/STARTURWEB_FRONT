@@ -32,37 +32,18 @@ img[alt="cloud_logo"] {
     filter: opacity(90%);
 }
 
-.contact_article > img {
-    width: 80px;
-    margin-left: 20px;
-    cursor: pointer;
-}
 
 
-.contact_article > img[alt="linkedin_contact_logo"] {
-    filter: brightness(70%);
-}
 
-.contact_article > img[alt="whatsapp_contact_logo"] {
-    filter: brightness(90%);
-}
+// Media Queries
+//
+//
+//
+//
+// 
+// 
+//
 
-.contact_article > img[alt="downarrow_contact_logo"]:hover {
-    cursor: none;
-    animation: moveDown 3s infinite; 
-}
-
-@keyframes moveDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(50px); 
-    }
-  }
-
-
-// // Media Queries
 @media screen and (min-width: 1200px) and (max-width: 2300px) {
     img[alt="starturweb_logo"] {
         top: 183px;
@@ -88,15 +69,6 @@ img[alt="cloud_logo"] {
         top: 240px;
         right: 55px;
       }
-    
-    .contact_article > img {
-        width: 80px;
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-bottom: 30px;
-        cursor: pointer;
-        justify-self: center;
-    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
@@ -124,15 +96,6 @@ img[alt="cloud_logo"] {
         top: 240px;
         right: 55px;
       }
-
-    .contact_article > img {
-        width: 80px;
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-bottom: 30px;
-        cursor: pointer;
-        justify-self: end;
-    }
 }
 
 @media screen and (min-width: 770px) and (max-width: 1000px) {
@@ -160,15 +123,6 @@ img[alt="cloud_logo"] {
         top: 240px;
         right: 55px;
       }
-
-    .contact_article > img {
-        width: 80px;
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-bottom: 30px;
-        cursor: pointer;
-        justify-self: center;
-    }
 }
 
 @media screen and (min-width: 655px) and (max-width: 770px) {
