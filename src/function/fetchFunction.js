@@ -1,4 +1,4 @@
-import { API_URL } from '../../public/config/API_URL';
+import { API_URL } from '../config/API_URL';
 
 export const fetchFunction = async ({
   endpoint,

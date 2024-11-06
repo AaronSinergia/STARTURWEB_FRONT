@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '../../../public/config/config';
+import config from '../../config/config';
 import { handleImageUrlClick } from '../../function/handleFunctions';
 import './ContactArticle.scss';
 
