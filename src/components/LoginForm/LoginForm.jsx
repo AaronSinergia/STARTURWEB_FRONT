@@ -5,9 +5,9 @@ const LoginForm = () => {
   return (
     <form>
       <label>USUARIO</label>
-      <input type="text" id="username" name="user" required />
+      <input type="text" id="username" name="user" />
       <label>CONTRASEÑA</label>
-      <input type="password" id="password" name="password" required />
+      <input type="password" id="password" name="password" />
     </form>
   );
 };
