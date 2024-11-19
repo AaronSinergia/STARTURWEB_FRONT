@@ -84,7 +84,7 @@
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1200px) {
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
     .photo_container {
         position: relative;
         width: auto;
@@ -101,6 +101,31 @@
     .textcontent { 
         top: 330px;
         left: 300px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .photo_container:hover .girl_photo {
+        filter: grayscale(0%);
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1050px) {
+    .photo_container {
+        position: relative;
+        width: auto;
+        margin-top: 10px;
+        left: 260px;
+    }
+
+    .girl_photo {
+        width: 500px;
+        animation: none; 
+        filter: grayscale(100%);
+    }
+
+    .textcontent { 
+        top: 255px;
+        left: 240px;
         transform: translate(-50%, -50%);
     }
     

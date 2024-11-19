@@ -10,7 +10,7 @@
     font-size: 30px;
     color: var( --gold-corpo-color);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
   
   .userreview {
@@ -63,10 +63,10 @@
 //
 //
 
-@media screen and (min-width: 1300px) and (max-width: 1669px) {
+@media screen and (min-width: 1300px) and (max-width: 2669px) {
   .reviews_section {
-    top: 120px;
-    left: 850px;
+    top: 130px;
+    left: 880px;
     right: 20px;
 }
 }
@@ -79,6 +79,7 @@
 }
 }
 
+//
 @media screen and (min-width: 1050px) and (max-width: 1150px) {
   .reviews_section {
     top: 120px;
@@ -92,7 +93,24 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 1050px) {
-  .reviews_section{
-    display: none;
-  }
+  .reviews_section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0px;
+
+    .title_review {
+      font-size: 25px;
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
+
+  .userreview {
+      font-size: 12px;
+      padding: 10px 0px;
+      margin: 4px auto;
+
+    }
+}
 }
