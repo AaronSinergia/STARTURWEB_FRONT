@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { context } from '../../hooks/context/context';
+import { toastSuccess } from '../../function/toastAlerts';
 import './UndoBTN.scss';
 
 const UndoBTN = () => {
@@ -10,16 +11,18 @@ const UndoBTN = () => {
     localStorage.removeItem('selectedHeader');
     localStorage.removeItem('selectedBody');
     localStorage.removeItem('projectNameClicked');
-    alert('Selección BORRADA!');
+    toastSuccess('Selección borrada!');
   };
 
   return (
-    <img
-      className="return_btn"
-      src="./assets/icons/return_button.png"
-      alt="return_btn"
-      onClick={handleUndo}
-    />
+    <>
+      <img
+        className="return_btn"
+        src="./assets/icons/return_button.png"
+        alt="return_btn"
+        onClick={handleUndo}
+      />
+    </>
   );
 };
 

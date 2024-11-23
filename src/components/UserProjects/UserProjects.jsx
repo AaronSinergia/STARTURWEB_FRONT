@@ -9,6 +9,8 @@ import {
 } from '../../function/handleFunctions';
 import { context } from '../../hooks/context/context';
 import Button from '../Button/Button';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './UserProjects.scss';
 
 const UserProjects = () => {
@@ -17,6 +19,13 @@ const UserProjects = () => {
   const { projects } = state;
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+
+  const notify = (message) =>
+    toast.success(message, {
+      draggable: true,
+      position: 'top-center',
+      autoClose: 700,
+    });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +47,7 @@ const UserProjects = () => {
           console.log('No se encontraron categorías.');
         }
       } catch (err) {
-        alert(err.message);
+        notify(err.message);
       }
     };
 

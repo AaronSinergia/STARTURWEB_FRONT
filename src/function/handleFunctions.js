@@ -1,4 +1,5 @@
 import { fetchFunction } from './fetchFunction';
+import { toastSuccess, toastInfo, toastError } from './toastAlerts';
 
 export const registerUser = async (navigate) => {
   event.preventDefault();
@@ -17,14 +18,14 @@ export const registerUser = async (navigate) => {
   console.log(response);
 
   if (response.status === 201) {
-    alert(`Bienvenido ${username}`);
+    toastSuccess(`Bienvenido ${username}`);
     localStorage.setItem('user_id', response.response._id);
     localStorage.setItem('user_id', response.response._id);
     localStorage.setItem('USERNAME', response.response.username);
 
     navigate('/start_project');
   } else {
-    alert(
+    toastError(
       'Ya se ha registrado un usuario con ese nombre o el usuario/contraseña no han sido especificados.'
     );
   }
@@ -45,13 +46,13 @@ export const loginUser = async (navigate) => {
   });
 
   if (response.status === 200) {
-    alert(`Bienvenido ${username}`);
+    toastSuccess(`Bienvenido ${username}`);
     localStorage.setItem('TOKEN', response.response.token);
     localStorage.setItem('user_id', response.response.user._id);
     localStorage.setItem('USERNAME', response.response.user.username);
     navigate('/start_project');
   } else {
-    alert('El usuario o contraseña no existen');
+    toastError('El usuario o contraseña no existen');
   }
 };
 
@@ -74,8 +75,8 @@ export const registerNewWebPage = async (state) => {
 
   console.log(response);
 
-  alert(
-    'Selección guardada! Puedes ver todos tus proyectos creados, clicando en tu perfil y luego en "Mis Proyectos". '
+  toastInfo(
+    'Selección guardada! Tus proyectos creados están en tu Perfil > "Mis Proyectos".'
   );
 };
 
@@ -190,7 +191,7 @@ export const handleDeleteProject = async (project, projects, dispatch) => {
 
     alert('El proyecto ha sido borrado con éxito.');
   } catch (error) {
-    console.error('Error al eliminar el proyecto:', error);
+    toastError('Error al eliminar el proyecto:', error);
   }
 };
 

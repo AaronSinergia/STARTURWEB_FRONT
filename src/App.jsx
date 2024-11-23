@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import Footer from './components/footer/Footer';
 import UserProfile from './components/UserProfile/UserProfile';
 import UserProjects from './components/UserProjects/UserProjects';
+import { ToastContainer } from 'react-toastify';
 import './App.scss';
 import './styles/images.scss';
 
@@ -31,6 +32,7 @@ function App() {
         </Route>
       </Routes>
       <Footer />
+      <ToastContainer draggable position="top-center" autoClose={2000} />
     </>
   );
 }
