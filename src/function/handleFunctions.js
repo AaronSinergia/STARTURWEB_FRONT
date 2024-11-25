@@ -18,7 +18,7 @@ export const registerUser = async (navigate) => {
   console.log(response);
 
   if (response.status === 201) {
-    toastSuccess(`Bienvenido ${username}`);
+    toastSuccess(`Bienvenid@ ${username}`);
     localStorage.setItem('user_id', response.response._id);
     localStorage.setItem('user_id', response.response._id);
     localStorage.setItem('USERNAME', response.response.username);
@@ -46,7 +46,7 @@ export const loginUser = async (navigate) => {
   });
 
   if (response.status === 200) {
-    toastSuccess(`Bienvenido ${username}`);
+    toastSuccess(`Bienvenid@ ${username}`);
     localStorage.setItem('TOKEN', response.response.token);
     localStorage.setItem('user_id', response.response.user._id);
     localStorage.setItem('USERNAME', response.response.user.username);
@@ -74,6 +74,10 @@ export const registerNewWebPage = async (state) => {
   });
 
   console.log(response);
+
+  localStorage.removeItem('selectedHeader');
+  localStorage.removeItem('selectedBody');
+  localStorage.removeItem('projectNameClicked');
 
   toastInfo(
     'Selección guardada! Tus proyectos creados están en tu Perfil > "Mis Proyectos".'

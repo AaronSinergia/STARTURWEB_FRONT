@@ -142,6 +142,12 @@
 .register_btn:hover, .enter_btn:hover, .logout_button:hover,  .notfound_btn:hover, .submit_btn:hover, .save_button:hover {
     background: linear-gradient(var(--gold-corpo-color), rgb(143, 98, 14));
   }
+
+.loading_logo {
+   width: 40px;
+   background-color: transparent;
+ }
+ 
        
 // Media Queries
 //
@@ -153,15 +159,22 @@
 //
 
 @media screen and (min-width: 1200px) and (max-width: 2300px) {
-
    .logout_button {
    position: absolute;
    width: 80px;
    font-size: 12px;
-   top: 360px;
+   top: 350px;
    left: 8px;
    writing-mode: horizontal-tb;
    }
+
+   .loading_logo {
+      position: absolute;
+      width: 150px;
+      margin-top: 520px;
+      background-color: transparent;
+    }
+    
  }
  
  @media screen and (min-width: 1100px) and (max-width: 1200px) {
@@ -169,10 +182,19 @@
       position: absolute;
       width: 80px;
       font-size: 12px;
-      top: 360px;
+      top: 350px;
       left: 8px;
       writing-mode: horizontal-tb;
       }
+
+
+      .loading_logo {
+         position: absolute;
+         width: 150px;
+         margin-top: 520px;
+         background-color: transparent;
+       }
+       
  }
  
  @media screen and (min-width: 1000px) and (max-width: 1100px) {
@@ -180,10 +202,18 @@
       position: absolute;
       width: 80px;
       font-size: 12px;
-      top: 360px;
+      top: 350px;
       left: 8px;
       writing-mode: horizontal-tb;
       }
+
+      .loading_logo {
+         position: absolute;
+         width: 150px;
+         margin-top: 520px;
+         background-color: transparent;
+       }
+       
  }
  
  @media screen and (min-width: 960px) and (max-width: 1000px) {

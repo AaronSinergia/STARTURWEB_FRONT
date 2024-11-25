@@ -8,20 +8,18 @@ import { loginUser } from '../function/handleFunctions';
 const Login = () => {
   const navigate = useNavigate();
 
+  const handleLogin = async () => {
+    await loginUser(navigate);
+  };
+
   return (
     <>
       <H2Box className="login_title" text="Iniciar Sesión" />
       <LoginForm />
       <div className="login_btns">
-        <Button
-          onClick={() => {
-            loginUser(navigate);
-          }}
-          className={'enter_btn'}
-          text={'ENTRAR'}
-        />
+        <Button onClick={handleLogin} className="enter_btn" text="ENTRAR" />
         <Link to="/register">
-          <Button className={'register_btn'} text={'REGISTRATE'} />
+          <Button className="register_btn" text="REGISTRATE" />
         </Link>
       </div>
     </>

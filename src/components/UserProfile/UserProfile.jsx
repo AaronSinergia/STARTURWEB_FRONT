@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchFunction } from '../../function/fetchFunction';
 import Button from '../Button/Button';
+import { toastSuccess, toastWarning } from '../../function/toastAlerts';
 import './UserProfile.scss';
 
 const UserProfile = () => {
@@ -10,7 +11,6 @@ const UserProfile = () => {
     username: '',
     password: '',
   });
-  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -20,7 +20,7 @@ const UserProfile = () => {
       });
       if (response) {
         setProfile({
-          name: response.name || '',
+          username: response.name || '',
           password: '',
         });
       }
@@ -40,23 +40,29 @@ const UserProfile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log(profile);
+
     const { status, response } = await fetchFunction({
       endpoint: `users/${userID}`,
       method: 'PUT',
       body: JSON.stringify(profile),
     });
 
+    console.log(response);
+
     if (status === 200) {
-      setMessage('Perfil actualizado correctamente');
+      toastSuccess('Perfil actualizado correctamente');
     } else {
-      setMessage('Error al actualizar el perfil');
+      toastWarning(
+        'Error al actualizar el perfil. El usuario o contraseña ya existen.'
+      );
     }
   };
 
   return (
     <div className="user-profile">
       <h2 className="title_myprofile">Mi Perfil</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="form-group">
           <label htmlFor="username">CAMBIAR USUARIO</label>
           <input
@@ -82,10 +88,9 @@ const UserProfile = () => {
           className={'submit_btn'}
           type={'submit'}
           text={'Guardar Cambios'}
+          onClick={handleSubmit}
         />
       </form>
-
-      {message && <p className="error_message">{message}</p>}
     </div>
   );
 };

@@ -6,12 +6,12 @@ import './UndoBTN.scss';
 const UndoBTN = () => {
   const { dispatch } = useContext(context);
 
-  const handleUndo = () => {
-    dispatch({ type: 'UNDO_LAST_ACTION' });
+  const handleUndo = async () => {
+    await dispatch({ type: 'UNDO_LAST_ACTION' });
     localStorage.removeItem('selectedHeader');
     localStorage.removeItem('selectedBody');
     localStorage.removeItem('projectNameClicked');
-    toastSuccess('Selección borrada!');
+    toastSuccess('Se ha desecho la selección!');
   };
 
   return (

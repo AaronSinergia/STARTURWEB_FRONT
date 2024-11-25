@@ -8,15 +8,17 @@ import { useNavigate } from 'react-router-dom';
 const Register = () => {
   const navigate = useNavigate();
 
+  const handleRegister = async () => {
+    await registerUser(navigate);
+  };
+
   return (
     <>
       <H2Box className="login_title" text="Registro" />
       <LoginForm />
       <div className="login_btns">
         <Button
-          onClick={() => {
-            registerUser(navigate);
-          }}
+          onClick={handleRegister}
           className={'register_btn'}
           text={'REGISTRATE'}
         />

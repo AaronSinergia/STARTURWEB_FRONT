@@ -19,6 +19,8 @@ export const fetchFunction = async ({
 
   const response = await res.json();
 
+  console.log(response);
+
   return {
     status: res.status,
     response,
